@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HelpDesk-Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header (Standard) -->
+    <header class="fixed-top shadow-sm">
+        <div class="container h-100 d-flex align-items-center justify-content-between">
+            <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                <div class="logo-icon"><i class="fas fa-headset"></i></div>
+                <span class="fs-4 fw-bold text-lowercase tracking-tight"
+                    style="color: var(--text-main);">helpdesk</span>
+            </a>
+            <nav class="d-none d-lg-flex align-items-center gap-4">
+                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-muted">home</a>
+                <a href="services.html" class="text-decoration-none text-lowercase fw-medium text-muted">services</a>
+                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
+                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
+                <a href="contact.html" class="text-decoration-none text-lowercase fw-bold text-primary">contact</a>
+                <div class="d-flex align-items-center gap-3 ms-4 ps-4 border-start">
+                    <button id="theme-toggle"><i class="bi bi-moon-fill"></i></button>
+                    <a href="login.html" class="btn btn-primary-custom px-4">login</a>
+                </div>
+            </nav>
+            <button class="btn btn-link d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i
+                    class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="pt-5 mt-5">
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container py-5">
+                <span class="text-primary fw-bold text-uppercase tracking-widest small mb-3 d-block">Get In Touch</span>
+                <h1 class="display-3 fw-bold text-lowercase mb-4">Contact Support</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">We are here to help. Reach out via any of
+                    the channels below or visit one of our global technology hubs.</p>
+            </div>
+        </section>
+
+        <!-- Main Contact Area (Form + Map) -->
+        <section class="py-4">
+            <div class="container">
+                <div class="card-custom p-4 p-md-5 border shadow-xl mb-5">
+                    <div class="row g-5 align-items-stretch">
+                        <!-- Message Form -->
+                        <div class="col-lg-6">
+                            <h2 class="h3 fw-bold text-lowercase mb-4">Send a Message</h2>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded-4 p-3 bg-light-subtle border-0"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control rounded-4 p-3 bg-light-subtle border-0"
+                                        placeholder="Last Name">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control rounded-4 p-3 bg-light-subtle border-0"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select rounded-4 p-3 bg-light-subtle border-0 text-muted">
+                                        <option selected disabled>Select Department</option>
+                                        <option>Technical Support</option>
+                                        <option>Sales & Inquiries</option>
+                                        <option>Billing & Accounts</option>
+                                        <option>Partnerships</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control rounded-4 p-3 bg-light-subtle border-0" rows="5"
+                                        placeholder="How can we help?"></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-primary-custom w-100 py-3 shadow-lg shadow-blue-500/20">send
+                                        message</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Map -->
+                        <div class="col-lg-6">
+                            <div
+                                class="h-100 rounded-[2rem] overflow-hidden bg-secondary bg-opacity-10 position-relative min-h-[400px]">
+                                <iframe width="100%" height="100%"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4064%2C37.7816%2C-122.3907%2C37.7895&amp;layer=mapnik"
+                                    style="border: 0; position: absolute; top: 0; left: 0;" allowfullscreen=""
+                                    loading="lazy">
+                                </iframe>
+                                <!-- Map Overlay Label -->
+                                <div
+                                    class="position-absolute bottom-0 start-0 m-4 p-3 bg-white rounded-4 shadow-lg border small d-none d-md-block">
+                                    <div class="fw-bold">Global HQ</div>
+                                    <div class="text-muted">100 Tech Plaza, San Francisco</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Info Cards -->
+                <div class="row g-4 mb-5 pb-5">
+                    <div class="col-md-4">
+                        <div class="card-custom text-center py-5">
+                            <div class="bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Phone</h3>
+                            <p class="text-muted mb-1 opacity-75">+1 (800) HELP-PRO</p>
+                            <p class="text-muted small opacity-50">Mon-Fri 9am-6pm EST</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom text-center py-5">
+                            <div class="bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Email</h3>
+                            <p class="text-muted mb-1 opacity-75">support@helpdesk.io</p>
+                            <p class="text-muted small opacity-50">24/7 Monitoring</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom text-center py-5">
+                            <div class="bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Office</h3>
+                            <p class="text-muted mb-1 opacity-75">San Francisco, CA</p>
+                            <p class="text-muted small opacity-50">100 Tech Plaza, 94107</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Access -->
+                <div class="text-center mb-5 pb-4">
+                    <h2 class="h3 fw-bold text-lowercase mb-5">Direct Department Access</h2>
+                    <div class="row g-4 text-start">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-4 rounded-4 border bg-light-subtle h-100">
+                                <h4 class="fw-bold fs-6 mb-3 text-lowercase">Technical Support</h4>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Email</div>
+                                <p class="small text-muted mb-3">support@helpdesk.io</p>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Phone</div>
+                                <p class="small text-muted mb-0">+1 (800) 555-0101</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-4 rounded-4 border bg-light-subtle h-100">
+                                <h4 class="fw-bold fs-6 mb-3 text-lowercase">Sales & Inquiries</h4>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Email</div>
+                                <p class="small text-muted mb-3">sales@helpdesk.io</p>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Phone</div>
+                                <p class="small text-muted mb-0">+1 (800) 555-0102</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-4 rounded-4 border bg-light-subtle h-100">
+                                <h4 class="fw-bold fs-6 mb-3 text-lowercase">Billing & Accounts</h4>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Email</div>
+                                <p class="small text-muted mb-3">billing@helpdesk.io</p>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Phone</div>
+                                <p class="small text-muted mb-0">+1 (800) 555-0103</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-4 rounded-4 border bg-light-subtle h-100">
+                                <h4 class="fw-bold fs-6 mb-3 text-lowercase">Partnerships</h4>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Email</div>
+                                <p class="small text-muted mb-3">partners@helpdesk.io</p>
+                                <div class="small fw-bold text-primary text-uppercase tracking-widest mb-1"
+                                    style="font-size: 0.6rem;">Phone</div>
+                                <p class="small text-muted mb-0">+1 (800) 555-0104</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Hubs -->
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="h3 fw-bold text-lowercase mb-5">Global Hubs</h2>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-6 col-md-3">
+                            <div class="rounded-4 overflow-hidden border">
+                                <img src="images/hub_sf.png" alt="SF" class="w-100 h-100 object-cover"
+                                    style="height: 150px;">
+                                <div class="p-3">
+                                    <h5 class="fw-bold small mb-1">San Francisco</h5>
+                                    <p class="text-muted extra-small mb-0">UTC-8 (PST)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="rounded-4 overflow-hidden border">
+                                <img src="images/hub_london.png" alt="London" class="w-100 h-100 object-cover"
+                                    style="height: 150px;">
+                                <div class="p-3">
+                                    <h5 class="fw-bold small mb-1">London</h5>
+                                    <p class="text-muted extra-small mb-0">UTC+0 (GMT)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="rounded-4 overflow-hidden border">
+                                <img src="images/hub_singapore.png" alt="Singapore" class="w-100 h-100 object-cover"
+                                    style="height: 150px;">
+                                <div class="p-3">
+                                    <h5 class="fw-bold small mb-1">Singapore</h5>
+                                    <p class="text-muted extra-small mb-0">UTC+8 (SGT)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="rounded-4 overflow-hidden border">
+                                <img src="images/hub_sydney.png" alt="Sydney" class="w-100 h-100 object-cover"
+                                    style="height: 150px;">
+                                <div class="p-3">
+                                    <h5 class="fw-bold small mb-1">Sydney</h5>
+                                    <p class="text-muted extra-small mb-0">UTC+11 (AEDT)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... -->
+    <footer class="bg-light-subtle border-top py-4">
+        <div class="container text-center">
+            <p class="small text-muted">&copy; 2025 helpdesk. all rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

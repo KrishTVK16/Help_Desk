@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk-Pro | Corporate IT Support</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Enterprise-grade IT support that scales with your ambition. Secure, reliable, and human-centric.">
+    <meta name="keywords" content="IT Support, HelpDesk, Enterprise IT, Cybersecurity, Cloud Solutions">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind v4 CDN (Experimental/New) -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed-top">
+        <div class="container h-100 d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                <div class="logo-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <span class="fs-4 fw-bold text-lowercase tracking-tight"
+                    style="color: var(--text-main);">helpdesk</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="d-none d-lg-flex align-items-center gap-4">
+                <div class="dropdown">
+                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown">
+                        home
+                    </button>
+                    <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
+                        <li><a class="dropdown-item rounded-3 active" href="index.html">Corporate Edition</a></li>
+                        <li><a class="dropdown-item rounded-3" href="index2.html">Modern AI Edition</a></li>
+                    </ul>
+                </div>
+                <a href="services.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">services</a>
+                <a href="about.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">about</a>
+                <a href="faq.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">faq</a>
+                <a href="contact.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">contact</a>
+
+                <div class="d-flex align-items-center gap-3 ms-4 ps-4 border-start">
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary-custom px-4">login</a>
+                    <a href="register.html" class="btn btn-primary-custom px-4">sign up</a>
+                </div>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="d-flex d-lg-none align-items-center gap-3">
+                <button id="theme-toggle-mobile" class="btn btn-link text-muted p-0">
+                    <i class="bi bi-moon-fill fs-5"></i>
+                </button>
+                <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <i class="fas fa-bars fs-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-lowercase">helpdesk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="d-flex flex-column gap-4">
+                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-primary">home</a>
+                <a href="index2.html" class="text-decoration-none text-lowercase fw-medium text-muted">modern ai</a>
+                <a href="services.html" class="text-decoration-none text-lowercase fw-medium text-muted">services</a>
+                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
+                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
+                <a href="contact.html" class="text-decoration-none text-lowercase fw-medium text-muted">contact us</a>
+                <hr>
+                <a href="login.html" class="btn btn-primary-custom w-100">login</a>
+                <a href="register.html" class="btn btn-primary-custom w-100">sign up</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 mt-5">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span
+                            class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-4 text-uppercase tracking-widest fw-bold"
+                            style="font-size: 0.7rem;">Corporate IT Support</span>
+                        <h1 class="display-3 fw-bold text-lowercase mb-4">Enterprise-grade IT for growing teams.</h1>
+                        <p class="lead text-muted mb-5">Proactive monitoring, strategic consulting, and elite technical
+                            support designed to scale with your business ambition.</p>
+                        <div class="d-flex gap-3">
+                            <a href="register.html" class="btn btn-primary-custom btn-lg px-5 py-3">get started</a>
+                            <a href="services.html"
+                                class="btn btn-outline-secondary btn-lg px-5 py-3 rounded-4 fw-bold lowercase">explore
+                                solutions</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative overflow-hidden rounded-[3rem] shadow-2xl scale-110">
+                            <img src="images/hero_server_room.png" alt="Server Room" class="w-100 h-100 object-cover">
+                            <!-- Floating Glass Card -->
+                            <div
+                                class="position-absolute bottom-0 start-0 bg-white p-4 rounded-4 shadow-lg m-4 border d-none d-md-block">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary text-white p-3 rounded-3">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold fs-4">99.9%</div>
+                                        <div class="text-muted small uppercase tracking-tighter">System Uptime</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-5 bg-light-subtle">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="display-5 fw-bold text-lowercase">Complete IT Managed Services</h2>
+                    <p class="text-muted">A full spectrum of support from basic fixes to complex infrastructure.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-custom h-100 text-center">
+                            <div class="bg-primary-subtle text-primary p-4 rounded-4 mb-4 d-inline-block">
+                                <i class="fas fa-server fs-3"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Managed IT</h3>
+                            <p class="text-muted mb-0">Full-lifecycle management of your hardware and software
+                                infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom h-100 text-center">
+                            <div class="bg-primary-subtle text-primary p-4 rounded-4 mb-4 d-inline-block">
+                                <i class="fas fa-shield-virus fs-3"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Cybersecurity</h3>
+                            <p class="text-muted mb-0">Multi-layered defense systems to keep your data safe and
+                                compliant.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom h-100 text-center">
+                            <div class="bg-primary-subtle text-primary p-4 rounded-4 mb-4 d-inline-block">
+                                <i class="fas fa-cloud fs-3"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Cloud Solutions</h3>
+                            <p class="text-muted mb-0">Seamless migration and management of Azure, AWS, and Hybrid
+                                Cloud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div
+                    class="bg-primary rounded-[3rem] p-5 text-center text-white shadow-2xl overflow-hidden position-relative">
+                    <div class="position-relative z-1">
+                        <h2 class="display-5 fw-bold text-lowercase mb-4">Ready to upgrade your infrastructure?</h2>
+                        <p class="lead mb-5 opacity-75">Join over 500+ enterprises who trust HelpDesk Pro for their
+                            mission-critical IT support.</p>
+                        <a href="register.html"
+                            class="btn btn-light btn-lg px-5 py-3 rounded-4 fw-bold text-primary text-lowercase">get
+                            started today</a>
+                    </div>
+                    <!-- Abstract Background Circles -->
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10 pointer-events-none">
+                        <div class="position-absolute bg-white rounded-circle"
+                            style="width: 300px; height: 300px; top: -150px; left: -150px;"></div>
+                        <div class="position-absolute bg-white rounded-circle"
+                            style="width: 200px; height: 200px; bottom: -100px; right: -100px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand + Social -->
+                <div class="col-lg-4">
+                    <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none mb-4">
+                        <div class="logo-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <span class="fs-4 fw-bold text-lowercase tracking-tight"
+                            style="color: var(--text-main);">helpdesk</span>
+                    </a>
+                    <p class="text-muted mb-4 opacity-75">Enterprise-grade IT support that scales with your ambition.
+                        Secure, reliable, and human-centric.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-lg-2">
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Platform</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                        <li><a href="index.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">home</a></li>
+                        <li><a href="services.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">services</a>
+                        </li>
+                        <li><a href="pricing.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">pricing</a>
+                        </li>
+                        <li><a href="status.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">status</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support Links -->
+                <div class="col-lg-2">
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Support</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                        <li><a href="about.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">about us</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">contact</a>
+                        </li>
+                        <li><a href="faq.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">faq</a></li>
+                        <li><a href="privacy.html"
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">legal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4">
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Stay Updated</h4>
+                    <p class="text-muted small mb-4 opacity-75">Subscribe for the latest updates and security alerts.
+                    </p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control rounded-4 border-muted p-3"
+                            placeholder="email@company.com">
+                        <button type="submit" class="btn btn-primary-custom px-4">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mt-5 mb-4 opacity-10">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="text-muted small mb-0">&copy; 2025 helpdesk. all rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html" class="text-decoration-none text-muted small hover:text-primary">Privacy
+                        Policy</a>
+                    <a href="terms.html" class="text-decoration-none text-muted small hover:text-primary">Terms of
+                        Service</a>
+                    <a href="#" class="text-decoration-none text-muted small hover:text-primary">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom JS -->
+    <script src="main.js" defer></script>
+</body>
+
+</html>

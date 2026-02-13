@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | HelpDesk-Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header (Same as index) -->
+    <header class="fixed-top shadow-sm">
+        <div class="container h-100 d-flex align-items-center justify-content-between">
+            <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                <div class="logo-icon"><i class="fas fa-headset"></i></div>
+                <span class="fs-4 fw-bold text-lowercase tracking-tight"
+                    style="color: var(--text-main);">helpdesk</span>
+            </a>
+            <nav class="d-none d-lg-flex align-items-center gap-4">
+                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-muted">home</a>
+                <a href="services.html" class="text-decoration-none text-lowercase fw-bold text-primary">services</a>
+                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
+                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
+                <a href="contact.html" class="text-decoration-none text-lowercase fw-medium text-muted">contact</a>
+                <div class="d-flex align-items-center gap-3 ms-4 ps-4 border-start">
+                    <button id="theme-toggle"><i class="bi bi-moon-fill"></i></button>
+                    <a href="login.html" class="btn btn-primary-custom px-4">login</a>
+                </div>
+            </nav>
+            <button class="btn btn-link d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i
+                    class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold text-lowercase">helpdesk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="d-flex flex-column gap-4">
+                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-muted">home</a>
+                <a href="services.html" class="text-decoration-none text-lowercase fw-bold text-primary">services</a>
+                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
+                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
+                <a href="contact.html" class="text-decoration-none text-lowercase fw-medium text-muted">contact</a>
+                <hr>
+                <a href="login.html" class="btn btn-primary-custom w-100">login</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="pt-5 mt-5">
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container py-5">
+                <span class="text-primary fw-bold text-uppercase tracking-widest small mb-3 d-block">Our
+                    Expertise</span>
+                <h1 class="display-3 fw-bold text-lowercase mb-4">Comprehensive IT Solutions</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">From essential helpdesk support to advanced
+                    cybersecurity ecosystems, we manage your entire digital lifecycle.</p>
+            </div>
+        </section>
+
+        <!-- detailed service cards -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <!-- Managed IT -->
+                    <div class="col-md-4">
+                        <div class="card-custom h-100">
+                            <div
+                                class="bg-primary text-white p-3 rounded-4 mb-4 d-inline-block shadow-lg shadow-blue-500/20">
+                                <i class="fas fa-server fs-4"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Managed IT</h3>
+                            <p class="text-muted small mb-4">Proactive infrastructure monitoring and maintenance.</p>
+                            <div class="collapse mb-4" id="service1">
+                                <h4 class="text-uppercase tracking-widest fw-bold mb-3 d-block text-primary"
+                                    style="font-size: 0.65rem;">Key Features</h4>
+                                <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                                    <li><i class="fas fa-check text-primary me-2"></i> 24/7 Server Monitoring</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Automated Patch Management</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Asset Lifecycle Management</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Vendor Management</li>
+                                </ul>
+                            </div>
+                            <button
+                                class="btn btn-link p-0 text-primary text-decoration-none fw-bold text-uppercase tracking-tighter small"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#service1">
+                                learn more <i class="fas fa-chevron-down ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Cybersecurity -->
+                    <div class="col-md-4">
+                        <div class="card-custom h-100">
+                            <div
+                                class="bg-primary text-white p-3 rounded-4 mb-4 d-inline-block shadow-lg shadow-blue-500/20">
+                                <i class="fas fa-shield-virus fs-4"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Cybersecurity</h3>
+                            <p class="text-muted small mb-4">Threat detection, firewall management, and zero-trust
+                                architecture.</p>
+                            <div class="collapse mb-4" id="service2">
+                                <h4 class="text-uppercase tracking-widest fw-bold mb-3 d-block text-primary"
+                                    style="font-size: 0.65rem;">Key Features</h4>
+                                <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                                    <li><i class="fas fa-check text-primary me-2"></i> Endpoint Protection (EDR)</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> SIEM/SOC Services</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Penetration Testing</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Security Awareness Training</li>
+                                </ul>
+                            </div>
+                            <button
+                                class="btn btn-link p-0 text-primary text-decoration-none fw-bold text-uppercase tracking-tighter small"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#service2">
+                                learn more <i class="fas fa-chevron-down ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Cloud Solutions -->
+                    <div class="col-md-4">
+                        <div class="card-custom h-100">
+                            <div
+                                class="bg-primary text-white p-3 rounded-4 mb-4 d-inline-block shadow-lg shadow-blue-500/20">
+                                <i class="fas fa-cloud fs-4"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-lowercase mb-3">Cloud Solutions</h3>
+                            <p class="text-muted small mb-4">Azure/AWS migration, management, and cost optimization.</p>
+                            <div class="collapse mb-4" id="service3">
+                                <h4 class="text-uppercase tracking-widest fw-bold mb-3 d-block text-primary"
+                                    style="font-size: 0.65rem;">Key Features</h4>
+                                <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                                    <li><i class="fas fa-check text-primary me-2"></i> Cloud Migration Strategy</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Architecture Design</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Cost Optimization</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Hybrid Cloud Management</li>
+                                </ul>
+                            </div>
+                            <button
+                                class="btn btn-link p-0 text-primary text-decoration-none fw-bold text-uppercase tracking-tighter small"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#service3">
+                                learn more <i class="fas fa-chevron-down ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="py-5 bg-light-subtle">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-4">
+                    <span class="text-primary fw-bold text-uppercase tracking-widest small mb-3 d-block">Success
+                        Stories</span>
+                    <h2 class="display-6 fw-bold text-lowercase">Proven Results</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="display-5 fw-bold text-primary mb-2">99.99%</div>
+                            <h4 class="fw-bold fs-5 mb-3">FinTech Global</h4>
+                            <p class="text-muted small">Migrated legacy banking infrastructure to a hybrid cloud
+                                environment, reducing downtime by 94%.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">Cloud
+                                    Migration</span>
+                                <span
+                                    class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">Security</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="display-5 fw-bold text-primary mb-2">$2M Saved</div>
+                            <h4 class="fw-bold fs-5 mb-3">HealthPlus Networks</h4>
+                            <p class="text-muted small">Optimized software licensing and automated compliance reporting
+                                for 50+ hospital locations.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">Cost
+                                    Optimization</span>
+                                <span
+                                    class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-custom">
+                            <div class="display-5 fw-bold text-primary mb-2">10x Faster</div>
+                            <h4 class="fw-bold fs-5 mb-3">Logistics One</h4>
+                            <p class="text-muted small">Deployed edge computing nodes to improve warehouse tracking and
+                                inventory platforms.</p>
+                            <div class="d-flex gap-2">
+                                <span
+                                    class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">IoT</span>
+                                <span class="badge bg-primary-subtle text-primary border-0 rounded-pill px-2 py-1">Edge
+                                    Computing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-4">
+                    <span class="text-primary fw-bold text-uppercase tracking-widest small mb-3 d-block">Transparent
+                        Pricing</span>
+                    <h2 class="display-6 fw-bold text-lowercase">Plans that scale</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Standard -->
+                    <div class="col-md-4">
+                        <div class="card-custom border-2">
+                            <h3 class="h5 fw-bold text-lowercase mb-3">Standard</h3>
+                            <div class="d-flex align-items-baseline gap-2 mb-4">
+                                <span class="display-5 fw-bold text-primary">$29</span>
+                                <span class="text-muted">/user/mo</span>
+                            </div>
+                            <p class="text-muted small mb-5">Essential support for growing teams.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 border-top pt-4">
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> 8x5 Remote Support</li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Basic Monitoring</li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Antivirus Included</li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Patch Management</li>
+                            </ul>
+                            <a href="register.html"
+                                class="btn btn-outline-primary w-100 py-3 rounded-4 fw-bold lowercase">choose
+                                standard</a>
+                        </div>
+                    </div>
+                    <!-- Professional -->
+                    <div class="col-md-4">
+                        <div class="card-custom border-primary shadow-2xl relative"
+                            style="transform: scale(1.05); z-index: 10;">
+                            <div class="badge bg-primary rounded-pill px-3 py-1 mb-3 text-uppercase tracking-widest fw-bold"
+                                style="font-size: 0.6rem;">Most Popular</div>
+                            <h3 class="h5 fw-bold text-lowercase mb-3">Professional</h3>
+                            <div class="d-flex align-items-baseline gap-2 mb-4">
+                                <span class="display-5 fw-bold text-primary">$79</span>
+                                <span class="text-muted">/user/mo</span>
+                            </div>
+                            <p class="text-muted small mb-5">Comprehensive IT management.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 border-top pt-4">
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> 24/7 Remote Support
+                                </li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Advanced Security (EDR)
+                                </li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Cloud Backup</li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Vendor Management</li>
+                            </ul>
+                            <a href="register.html"
+                                class="btn btn-primary-custom w-100 py-3 rounded-4 fw-bold lowercase shadow-lg shadow-blue-500/20">choose
+                                professional</a>
+                        </div>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="col-md-4">
+                        <div class="card-custom border-2">
+                            <h3 class="h5 fw-bold text-lowercase mb-3">Enterprise</h3>
+                            <div class="d-flex align-items-baseline gap-2 mb-4">
+                                <span class="display-5 fw-bold text-primary">Custom</span>
+                            </div>
+                            <p class="text-muted small mb-5">Strategic partnership & compliance.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-5 border-top pt-4">
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Dedicated CIO</li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> On-site Support Options
+                                </li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Compliance Management
+                                </li>
+                                <li class="small"><i class="fas fa-check text-success me-2"></i> Zero Trust Security
+                                </li>
+                            </ul>
+                            <a href="contact.html"
+                                class="btn btn-outline-primary w-100 py-3 rounded-4 fw-bold lowercase">contact sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Standard) -->
+    <footer class="bg-light-subtle border-top mt-5">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-4">
+                    <div class="logo-icon mb-4"><i class="fas fa-headset"></i></div>
+                    <h4 class="fw-bold mb-3 text-lowercase">helpdesk</h4>
+                    <p class="text-muted small opacity-75">Enterprise-grade IT support that scales with your ambition.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold text-lowercase mb-4">Platform</h5>
+                    <ul class="list-unstyled flex flex-col gap-2 small">
+                        <li><a href="index.html" class="text-decoration-none text-muted">home</a></li>
+                        <li><a href="services.html" class="text-decoration-none text-primary fw-bold">services</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none text-muted">pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="fw-bold text-lowercase mb-4">Support</h5>
+                    <ul class="list-unstyled flex flex-col gap-2 small">
+                        <li><a href="about.html" class="text-decoration-none text-muted">about us</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">contact</a></li>
+                        <li><a href="faq.html" class="text-decoration-none text-muted">faq</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold text-lowercase mb-4">Stay Updated</h5>
+                    <form class="flex gap-2">
+                        <input type="email" class="form-control rounded-4" placeholder="Email">
+                        <button class="btn btn-primary-custom px-3"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top py-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p class="small text-muted mb-0">&copy; 2025 helpdesk. all rights reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="privacy.html" class="text-muted small text-decoration-none hover:text-primary">Privacy</a>
+                    <a href="terms.html" class="text-muted small text-decoration-none hover:text-primary">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="bg-primary text-white border-0 rounded-circle"><i
+            class="fas fa-chevron-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
