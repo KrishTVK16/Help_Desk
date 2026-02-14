@@ -26,161 +26,209 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="bg-dark text-white">
+<body>
 
     <!-- Header -->
-    <header class="fixed-top bg-dark border-secondary">
+    <header class="fixed-top header-glass">
         <div class="container h-100 d-flex align-items-center justify-content-between">
             <!-- Logo -->
             <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
-                <div class="logo-icon bg-primary">
+                <div class="logo-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <span class="fs-4 fw-bold text-lowercase tracking-tight text-white">helpdesk</span>
+                <span class="fs-4 fw-bold text-lowercase tracking-tight logo-text">helpdesk</span>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="d-none d-lg-flex align-items-center gap-4">
                 <div class="dropdown">
-                    <button class="btn border-0 text-lowercase fw-medium text-white dropdown-toggle" type="button"
+                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle nav-active-red" type="button"
                         data-bs-toggle="dropdown">
                         home
                     </button>
-                    <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2 bg-dark border-secondary">
-                        <li><a class="dropdown-item rounded-3 text-white hover:bg-secondary" href="index.html">Corporate
-                                Edition</a></li>
-                        <li><a class="dropdown-item rounded-3 text-white bg-primary active" href="index2.html">Modern AI
+                    <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
+                        <li><a class="dropdown-item rounded-3" href="index.html">Corporate Edition</a></li>
+                        <li><a class="dropdown-item rounded-3 active nav-active-red" href="index2.html">Modern AI
                                 Edition</a></li>
                     </ul>
                 </div>
-                <a href="services.html"
-                    class="text-decoration-none text-lowercase fw-medium text-white-50 hover:text-white">services</a>
-                <a href="about.html"
-                    class="text-decoration-none text-lowercase fw-medium text-white-50 hover:text-white">about</a>
-                <a href="faq.html"
-                    class="text-decoration-none text-lowercase fw-medium text-white-50 hover:text-white">faq</a>
-                <a href="contact.html"
-                    class="text-decoration-none text-lowercase fw-medium text-white-50 hover:text-white">contact</a>
-
-                <div class="d-flex align-items-center gap-3 ms-4 ps-4 border-start border-secondary">
-                    <button id="theme-toggle" class="btn border-0 text-white-50" title="Toggle Theme">
-                        <i class="bi bi-sun-fill"></i>
+                <div class="dropdown">
+                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown">
+                        dashboards
                     </button>
-                    <a href="login.html" class="btn btn-primary px-4 rounded-3 fw-bold text-lowercase">login</a>
-                    <a href="register.html" class="btn btn-primary px-4 rounded-3 fw-bold text-lowercase">sign up</a>
+                    <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
+                        <li><a class="dropdown-item rounded-3" href="user-dashboard.html">User Dashboard</a></li>
+                        <li><a class="dropdown-item rounded-3" href="admin-dashboard.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+                <a href="services.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">services</a>
+                <a href="about.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">about</a>
+                <a href="faq.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">faq</a>
+                <a href="contact.html"
+                    class="text-decoration-none text-lowercase fw-medium text-muted hover:text-primary">contact</a>
+
+                <div class="d-flex align-items-center gap-3 ms-4 ps-4 border-start">
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-primary-custom px-4">login</a>
+                    <a href="register.html" class="btn btn-primary-custom px-4">sign up</a>
                 </div>
             </nav>
 
             <!-- Mobile Toggle -->
             <div class="d-flex d-lg-none align-items-center gap-3">
-                <button class="btn btn-link text-white-50 p-0" type="button" data-bs-toggle="offcanvas"
+                <button id="theme-toggle-mobile" class="btn btn-link p-0">
+                    <i class="bi bi-moon-fill fs-5"></i>
+                </button>
+                <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#mobileMenu">
-                    <i class="fas fa-bars fs-4"></i>
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header border-bottom border-secondary">
+    <!-- Mobile Menu (Offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
             <h5 class="offcanvas-title fw-bold text-lowercase">helpdesk</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <nav class="d-flex flex-column gap-4">
-                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-white">home</a>
+                <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-muted">home</a>
                 <a href="index2.html" class="text-decoration-none text-lowercase fw-medium text-primary">modern ai</a>
-                <a href="services.html" class="text-decoration-none text-lowercase fw-medium text-white-50">services</a>
-                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-white-50">about</a>
-                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-white-50">faq</a>
-                <a href="contact.html" class="text-decoration-none text-lowercase fw-medium text-white-50">contact
-                    us</a>
-                <hr class="bg-secondary">
-                <a href="login.html" class="btn btn-primary w-100 py-3 rounded-4">login</a>
-                <a href="register.html" class="btn btn-primary w-100 py-3 rounded-4">sign up</a>
+                <a href="user-dashboard.html" class="text-decoration-none text-lowercase fw-medium text-muted">user
+                    dashboard</a>
+                <a href="admin-dashboard.html" class="text-decoration-none text-lowercase fw-medium text-muted">admin
+                    dashboard</a>
+                <a href="services.html" class="text-decoration-none text-lowercase fw-medium text-muted">services</a>
+                <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
+                <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
+                <a href="contact.html" class="text-decoration-none text-lowercase fw-medium text-muted">contact us</a>
+                <hr>
+                <a href="login.html" class="btn btn-primary-custom w-100">login</a>
+                <a href="register.html" class="btn btn-primary-custom w-100">sign up</a>
             </nav>
         </div>
     </div>
 
     <main>
         <!-- Modern Hero Section -->
-        <section class="py-5 mt-5">
+        <section class="hero-modern-section py-5 mt-5">
             <div class="container py-5 text-center">
-                <div class="mx-auto max-w-4xl">
-                    <span class="text-primary fw-bold text-uppercase tracking-widest small mb-4 d-block">Next-Gen
+                <div class="mx-auto max-w-4xl py-5">
+                    <span
+                        class="text-primary fw-bold text-uppercase tracking-widest small mb-4 d-block fade-in">Next-Gen
                         Support Intelligence</span>
-                    <h1 class="display-2 fw-bold text-lowercase mb-4">Autonomous IT for the AI era.</h1>
-                    <p class="lead text-white-50 mb-5 max-w-2xl mx-auto">Leverage proprietary AI models to predict
-                        issues before they happen. Minimal latency, maximum security, zero friction.</p>
-                    <div class="d-flex gap-3 justify-content-center">
-                        <a href="register.html"
-                            class="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase">deploy now</a>
+                    <h1 class="display-2 fw-bold text-lowercase mb-4 fade-in text-glow text-white">Autonomous IT for the
+                        AI era.
+                    </h1>
+                    <p class="lead text-inverse mb-5 max-w-2xl mx-auto fade-in">Leverage proprietary AI models to
+                        predict issues before they happen. Minimal latency, maximum security, zero friction.</p>
+                    <div class="d-flex flex-column flex-md-row gap-3 justify-content-center fade-in pb-5">
+                        <a href="login.html"
+                            class="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase">initialize
+                            node</a>
                         <a href="services.html"
                             class="btn btn-outline-light btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase">view system
                             info</a>
                     </div>
-                </div>
 
-                <div class="mt-5 pt-5">
-                    <div class="position-relative">
-                        <!-- Abstract AI Visual -->
+                    <!-- Proactive Monitoring Floating Indicator -->
+                    <div class="fade-in pt-4 d-flex justify-content-center">
                         <div
-                            class="rounded-[3rem] overflow-hidden border border-secondary shadow-2xl bg-gradient-to-t from-blue-900/20 to-transparent p-1">
-                            <img src="https://picsum.photos/seed/ai-it/1200/600" alt="Modern AI Infrastructure"
-                                class="img-fluid rounded-[2.8rem] opacity-80">
-                            <div class="col-lg-6 mx-auto">
-                                <div class="position-relative">
-                                    <div
-                                        class="position-absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 rounded-full blur-[100px] -z-10">
-                                    </div>
-                                    <img src="images/modern_ai_node.png" alt="AI Engine"
-                                        class="w-100 h-auto rounded-[3rem] shadow-3xl grayscale-[0.2] border border-white/10">
-                                </div>
-                            </div>
-
-                            <!-- Floating Data Points -->
-                            <div class="position-absolute top-50 start-0 translate-middle-y d-none d-md-block ms-5">
-                                <div
-                                    class="bg-secondary p-3 rounded-4 border border-info-subtle shadow-lg animate-bounce">
-                                    <div class="small fw-bold text-info">Anomalies Detected: 0</div>
-                                </div>
-                            </div>
-                            <div class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block me-5">
-                                <div class="bg-secondary p-3 rounded-4 border border-primary-subtle shadow-lg">
-                                    <div class="small fw-bold text-primary">Response Time: 0.2ms</div>
-                                </div>
-                            </div>
+                            class="glass-card px-4 py-2 rounded-full border-primary shadow-lg d-flex align-items-center gap-2">
+                            <div class="w-3 h-3 bg-primary rounded-circle animate-pulse"></div>
+                            <span class="small fw-bold text-primary text-uppercase tracking-widest">Proactive
+                                Monitoring Active</span>
                         </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Stats Bar -->
-        <section class="py-5 bg-secondary bg-opacity-10 border-top border-bottom border-secondary">
-            <div class="container">
-                <div class="row g-4 text-center">
-                    <div class="col-md-3">
-                        <div class="fs-1 fw-bold text-primary">50k+</div>
-                        <div class="text-white-50 small text-uppercase tracking-widest">Tickets Solved/Mo</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="fs-1 fw-bold text-white">94%</div>
-                        <div class="text-white-50 small text-uppercase tracking-widest">Auto-Resolved</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="fs-1 fw-bold text-white">2.4m</div>
-                        <div class="text-white-50 small text-uppercase tracking-widest">Global Endpoints</div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="fs-1 fw-bold text-white">0.0%</div>
-                        <div class="text-white-50 small text-uppercase tracking-widest">Security Breaches</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Modern Features -->
+        <!-- Live Metric Ticker -->
+        <section class="py-3 border-top border-bottom overflow-hidden">
+            <div class="animate-marquee">
+                <div class="d-flex gap-5 align-items-center">
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        node_status: <span style="color: var(--text-main);">optimal</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        latency: <span style="color: var(--text-main);">0.8ms</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        encryption: <span style="color: var(--text-main);">aes-256</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        uptime: <span style="color: var(--text-main);">99.999%</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        threats_blocked: <span style="color: var(--text-main);">14.2k</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        node_status: <span style="color: var(--text-main);">optimal</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        latency: <span style="color: var(--text-main);">0.8ms</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        encryption: <span style="color: var(--text-main);">aes-256</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        uptime: <span style="color: var(--text-main);">99.999%</span></span>
+                    <span class="text-muted small text-uppercase tracking-widest"><span class="text-primary">●</span>
+                        threats_blocked: <span style="color: var(--text-main);">14.2k</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Velocity (Stats) -->
+        <section class="py-5 bg-light-subtle border-top border-bottom relative overflow-hidden">
+            <div class="container relative z-1">
+                <div class="row g-4 align-items-center mb-5">
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="images/modern_ai_node.png" alt="AI Neural Node"
+                                class="w-100 h-auto rounded-[3rem] shadow-3xl opacity-80 border animate-pulse-custom">
+                            <div
+                                class="position-absolute top-50 start-50 translate-middle w-100 h-100 bg-primary/20 blur-3xl -z-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="glass-card p-4 rounded-4 shadow-sm">
+                                    <div class="fs-2 fw-bold mb-1" style="color: var(--text-main);">87%</div>
+                                    <div class="text-white-80 small text-uppercase tracking-widest">Auto-Resolution
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glass-card p-4 rounded-4 border-secondary">
+                                    <div class="fs-2 fw-bold mb-1">0.2ms</div>
+                                    <div class="text-white-80 small text-uppercase tracking-widest">Mean Latency</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glass-card p-4 rounded-4 border-secondary">
+                                    <div class="fs-2 fw-bold mb-1">50k+</div>
+                                    <div class="text-white-80 small text-uppercase tracking-widest">Nodes Managed</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glass-card p-4 rounded-4 border-secondary">
+                                    <div class="fs-2 fw-bold mb-1">0.0%</div>
+                                    <div class="text-white-80 small text-uppercase tracking-widest">Security Breaches
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictive Analytics (Features) -->
         <section class="py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
@@ -188,13 +236,13 @@
                         <h2 class="display-4 fw-bold text-lowercase mb-4">Neural Support Core</h2>
                         <ul class="list-unstyled d-flex flex-column gap-4">
                             <li class="d-flex gap-3">
-                                <div class="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center"
+                                <div class="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center animate-pulse"
                                     style="width: 32px; height: 32px;">
                                     <i class="fas fa-check small"></i>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold mb-1">Predictive Maintenance</h4>
-                                    <p class="text-white-50">Our AI identifies hardware wear patterns before they cause
+                                    <h4 class="h5 fw-bold mb-1">Predictive Analytics</h4>
+                                    <p class="text-white-80">Our AI identifies hardware wear patterns before they cause
                                         downtime.</p>
                                 </div>
                             </li>
@@ -204,9 +252,9 @@
                                     <i class="fas fa-check small"></i>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold mb-1">Self-Healing Infrastructure</h4>
-                                    <p class="text-white-50">Automated protocols that resolve 80% of network issues
-                                        without human intervention.</p>
+                                    <h4 class="h5 fw-bold mb-1">Automated Patching</h4>
+                                    <p class="text-white-80">Self-healing infrastructure that resolves 87% of fleet
+                                        issues autonomously.</p>
                                 </div>
                             </li>
                             <li class="d-flex gap-3">
@@ -215,25 +263,28 @@
                                     <i class="fas fa-check small"></i>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold mb-1">Zero-Trust Security AI</h4>
-                                    <p class="text-white-50">Dynamic access control based on user behavior and
-                                        behavioral biometrics.</p>
+                                    <h4 class="h5 fw-bold mb-1">Quantum-Ready Encryption</h4>
+                                    <p class="text-white-80">Dynamic zero-trust architecture protecting every node in
+                                        your network.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <div
-                            class="bg-secondary bg-opacity-10 p-5 rounded-[3rem] border border-secondary shadow-2xl overflow-hidden position-relative">
-                            <!-- Code block style illustration -->
-                            <pre class="mb-0 text-info small">
+                            class="glass-card p-5 rounded-[3rem] border-primary shadow-2xl overflow-hidden position-relative">
+                            <div class="position-absolute top-0 end-0 p-3">
+                                <span
+                                    class="badge bg-primary rounded-pill text-uppercase tracking-widest px-3">Active</span>
+                            </div>
+                            <pre class="mb-0 small code-block-inner">
 <code>
-// AI Support Protocol v4.0.0
-const networkStatus = analyze(nodes);
+<span class="code-comment">// AI Support Protocol v4.0.0</span>
+<span class="code-keyword">const</span> networkStatus = <span class="code-func">analyze</span>(nodes);
 
-if (networkStatus.latency > threshold) {
-    optimizeRouting(region: 'Global');
-    notifyAdmins({ status: 'Recovered' });
+<span class="code-keyword">if</span> (networkStatus.latency > threshold) {
+    <span class="code-func">optimizeRouting</span>({ region: <span class="code-string">'Global'</span> });
+    <span class="code-func">notifyAdmins</span>({ status: <span class="code-string">'Recovered'</span> });
 }
 </code>
                             </pre>
@@ -242,98 +293,248 @@ if (networkStatus.latency > threshold) {
                 </div>
             </div>
         </section>
+
+        <!-- Roadmap (Modern Timeline) -->
+        <section class="py-5 border-top">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="display-5 fw-bold text-lowercase mb-3">System Integration Roadmap</h2>
+                    <p class="text-white-80">A 7-day rapid deployment into the helpdesk-pro AI ecosystem.</p>
+                </div>
+                <div class="mx-auto max-w-3xl">
+                    <div class="timeline-item">
+                        <h4 class="fw-bold mb-2">Day 01: Node Identification</h4>
+                        <p class="text-white-80 small">Mapping your global network infrastructure and identifying
+                            critical endpoints.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="fw-bold text-white mb-2">Day 03: Model Training</h4>
+                        <p class="text-white-80 small">Fine-tuning our predictive models on your historical system logs
+                            and telemetry.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 class="fw-bold text-white mb-2">Day 05: Shadow Deployment</h4>
+                        <p class="text-white-80 small">Running AI protocols in parallel with existing systems to verify
+                            accuracy.</p>
+                    </div>
+                    <div class="timeline-item pb-0 border-0">
+                        <h4 class="fw-bold text-white mb-2">Day 07: Initialize Node</h4>
+                        <p class="text-white-80 small">Full autonomous support activation with real-time proactive
+                            monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neural Node Network (New Section) -->
+        <section class="py-5 position-relative overflow-hidden">
+            <div class="container py-5 text-center">
+                <div class="mb-5">
+                    <h2 class="display-5 fw-bold text-lowercase mb-3">Neural Node Network</h2>
+                    <p class="text-white-80">Real-time visualization of AI connectivity across global clusters.</p>
+                </div>
+                <div
+                    class="neural-viz-container glass-card rounded-[4rem] d-flex align-items-center justify-content-center">
+                    <!-- Mesh Gradient Overlay -->
+                    <div class="section-mesh-gradient"></div>
+
+                    <div class="position-relative w-100 h-100">
+                        <!-- Ultra-Premium SVG Neural Network -->
+                        <svg class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
+                            <defs>
+                                <path id="path1" d="M100,100 C200,100 250,250 50%,50%" fill="none" />
+                                <path id="path2" d="M900,100 C800,100 750,250 50%,50%" fill="none" />
+                                <path id="path3" d="M100,400 C200,400 250,250 50%,50%" fill="none" />
+                                <path id="path4" d="M900,400 C800,400 750,250 50%,50%" fill="none" />
+                                <path id="path5" d="M500,50 C500,150 500,150 50%,50%" fill="none" />
+                                <path id="path6" d="M500,450 C500,350 500,350 50%,50%" fill="none" />
+                            </defs>
+
+                            <!-- Glowing Paths -->
+                            <path class="neural-path" d="M100,100 Q300,150 50%,50%" fill="none" />
+                            <path class="neural-path" d="M900,100 Q700,150 50%,50%" fill="none" />
+                            <path class="neural-path" d="M100,400 Q300,350 50%,50%" fill="none" />
+                            <path class="neural-path" d="M900,400 Q700,350 50%,50%" fill="none" />
+                            <path class="neural-path" d="M500,50 L50%,50%" fill="none" />
+                            <path class="neural-path" d="M500,450 L50%,50%" fill="none" />
+
+                            <!-- Animated Data Flow Packets -->
+                            <circle class="data-flow-dot animate-data-flow" r="3">
+                                <animateMotion dur="3s" repeatCount="indefinite">
+                                    <mpath href="#path1" />
+                                </animateMotion>
+                            </circle>
+                            <circle class="data-flow-dot animate-data-flow" r="3">
+                                <animateMotion dur="4s" repeatCount="indefinite" begin="1s">
+                                    <mpath href="#path2" />
+                                </animateMotion>
+                            </circle>
+                            <circle class="data-flow-dot animate-data-flow" r="2">
+                                <animateMotion dur="5s" repeatCount="indefinite" begin="0.5s">
+                                    <mpath href="#path3" />
+                                </animateMotion>
+                            </circle>
+                            <circle class="data-flow-dot animate-data-flow" r="4">
+                                <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s">
+                                    <mpath href="#path4" />
+                                </animateMotion>
+                            </circle>
+                        </svg>
+
+                        <!-- Neural Nodes (Enhanced with layered positioning) -->
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 20%; left: 10%; width: 12px; height: 12px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 50%; left: 5%; width: 8px; height: 8px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 80%; left: 10%; width: 10px; height: 10px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 20%; left: 90%; width: 12px; height: 12px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 80%; left: 90%; width: 10px; height: 10px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 10%; left: 50%; width: 8px; height: 8px;"></div>
+                        <div class="neural-node-point animate-pulse"
+                            style="top: 90%; left: 50%; width: 8px; height: 8px;"></div>
+
+                        <!-- Core Ripple Rings -->
+                        <div class="core-pulse-ring animate-ripple-1"></div>
+                        <div class="core-pulse-ring animate-ripple-2"></div>
+
+                        <!-- Center Core (Ultra-Premium) -->
+                        <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 10;">
+                            <div class="position-relative">
+                                <div
+                                    class="bg-primary rounded-circle w-16 h-16 d-flex align-items-center justify-content-center shadow-[0_0_50px_rgba(37,99,235,0.8)] border border-white/20">
+                                    <i class="fas fa-brain text-white fs-4"></i>
+                                </div>
+                                <div
+                                    class="position-absolute top-50 start-50 translate-middle w-24 h-24 border border-primary/30 rounded-circle animate-spin-slow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern CTA -->
+        <section class="py-5 overflow-hidden">
+            <div class="container py-5">
+                <div class="bg-grid-pattern border rounded-[4rem] p-5 text-center position-relative">
+                    <div
+                        class="position-absolute top-50 start-50 translate-middle w-100 h-100 bg-primary/10 blur-3xl -z-1">
+                    </div>
+                    <div class="relative z-1">
+                        <h2 class="display-4 fw-bold text-lowercase mb-4">Initialize Your Next-Gen Support.</h2>
+                        <p class="lead text-white-80 mb-5 max-w-xl mx-auto">Get exclusive access to the helpdesk-pro
+                            ecosystem and transform your IT lifecycle.</p>
+                        <div class="d-flex gap-3 justify-content-center">
+                            <a href="login.html"
+                                class="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase">get access
+                                now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer (Identical to Corporate but Dark) -->
-    <footer class="bg-dark border-secondary">
-        <div class="container py-5">
+    <!-- Footer -->
+    <footer>
+        <div class="container">
             <div class="row g-5">
+                <!-- Brand + Social -->
                 <div class="col-lg-4">
                     <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none mb-4">
-                        <div class="logo-icon bg-primary">
+                        <div class="logo-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <span class="fs-4 fw-bold text-lowercase tracking-tight text-white">helpdesk</span>
+                        <span class="fs-4 fw-bold text-lowercase tracking-tight logo-text">helpdesk</span>
                     </a>
-                    <p class="text-white-50 mb-4 opacity-75">Next-gen AI support for the world's most innovative
-                        enterprises.</p>
+                    <p class="text-muted mb-4 opacity-75">Enterprise-grade IT support that scales with your ambition.
+                        Secure, reliable, and human-centric.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white-50 fs-5 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white-50 fs-5 hover:text-white"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-white-50 fs-5 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-muted fs-5 hover:text-primary"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
+                <!-- Company Links -->
                 <div class="col-lg-2">
-                    <h4 class="fw-bold text-lowercase mb-4 fs-5 text-white">Platform</h4>
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Platform</h4>
                     <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                         <li><a href="index.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">home</a></li>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">home</a></li>
                         <li><a href="services.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">services</a>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">services</a>
                         </li>
                         <li><a href="pricing.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">pricing</a>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">pricing</a>
                         </li>
                         <li><a href="status.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">status</a>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">status</a>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Support Links -->
                 <div class="col-lg-2">
-                    <h4 class="fw-bold text-lowercase mb-4 fs-5 text-white">Support</h4>
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Support</h4>
                     <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
                         <li><a href="about.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">about us</a>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">about us</a>
                         </li>
                         <li><a href="contact.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">contact</a>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">contact</a>
                         </li>
                         <li><a href="faq.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">faq</a></li>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">faq</a></li>
                         <li><a href="privacy.html"
-                                class="text-decoration-none text-white-50 text-lowercase hover:text-white">legal</a>
-                        </li>
+                                class="text-decoration-none text-muted text-lowercase hover:text-primary">legal</a></li>
                     </ul>
                 </div>
 
+                <!-- Newsletter -->
                 <div class="col-lg-4">
-                    <h4 class="fw-bold text-lowercase mb-4 fs-5 text-white">Stay Updated</h4>
+                    <h4 class="fw-bold text-lowercase mb-4 fs-5">Stay Updated</h4>
+                    <p class="text-muted small mb-4 opacity-75">Subscribe for the latest updates and security alerts.
+                    </p>
                     <form class="d-flex gap-2">
-                        <input type="email"
-                            class="form-control rounded-4 bg-secondary bg-opacity-20 border-secondary text-white p-3"
+                        <input type="email" class="form-control rounded-4 border-muted p-3"
                             placeholder="email@company.com">
-                        <button type="submit" class="btn btn-primary px-4 rounded-4">
+                        <button type="submit" class="btn btn-primary-custom px-4">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
             </div>
 
-            <hr class="mt-5 mb-4 border-secondary opacity-50">
+            <hr class="mt-5 mb-4 opacity-10">
 
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <p class="text-white-50 small mb-0">&copy; 2025 helpdesk. all rights reserved.</p>
+                <p class="text-muted small mb-0">&copy; 2025 helpdesk. all rights reserved.</p>
                 <div class="d-flex gap-4">
-                    <a href="privacy.html" class="text-decoration-none text-white-50 small hover:text-white">Privacy
+                    <a href="privacy.html" class="text-decoration-none text-muted small hover:text-primary">Privacy
                         Policy</a>
-                    <a href="terms.html" class="text-decoration-none text-white-50 small hover:text-white">Terms of
+                    <a href="terms.html" class="text-decoration-none text-muted small hover:text-primary">Terms of
                         Service</a>
+                    <a href="#" class="text-decoration-none text-muted small hover:text-primary">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" title="Back to Top"
-        class="bg-primary shadow-lg border-0 text-white rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 48px; height: 48px; position: fixed; bottom: 32px; right: 32px; display: none; z-index: 1000;">
+    <button id="back-to-top" title="Back to Top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- JS Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Custom JS -->
     <script src="main.js" defer></script>
 </body>

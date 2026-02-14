@@ -2,32 +2,35 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Logic
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
     const htmlElement = document.documentElement;
-    const body = document.body;
 
     const savedTheme = localStorage.getItem('helpdesk_theme') || 'light';
     htmlElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    updateThemeIcons(savedTheme);
 
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('helpdesk_theme', newTheme);
-        updateThemeIcon(newTheme);
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('helpdesk_theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
     });
 
-    function updateThemeIcon(theme) {
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.classList.remove('bi-moon-fill');
-            icon.classList.add('bi-sun-fill');
-        } else {
-            icon.classList.remove('bi-sun-fill');
-            icon.classList.add('bi-moon-fill');
-        }
+    function updateThemeIcons(theme) {
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('bi-moon-fill');
+                icon.classList.add('bi-sun-fill');
+            } else {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-fill');
+            }
+        });
     }
 
     // Back to Top Logic
@@ -61,6 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (localStorage.getItem('helpdesk_rtl') === 'true') {
         htmlElement.setAttribute('dir', 'rtl');
     }
+
+    // Auto-Close Offcanvas on Link Click
+    const offcanvasElements = document.querySelectorAll('.offcanvas');
+    offcanvasElements.forEach(el => {
+        const links = el.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(el);
+                if (offcanvasInstance) {
+                    offcanvasInstance.hide();
+                }
+            });
+        });
+    });
 
     // Toggle RTL (for demo purposes)
     window.toggleRTL = () => {

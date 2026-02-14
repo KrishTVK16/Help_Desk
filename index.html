@@ -30,27 +30,37 @@
 <body>
 
     <!-- Header -->
-    <header class="fixed-top">
+    <header class="fixed-top header-glass">
         <div class="container h-100 d-flex align-items-center justify-content-between">
             <!-- Logo -->
             <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
                 <div class="logo-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <span class="fs-4 fw-bold text-lowercase tracking-tight"
-                    style="color: var(--text-main);">helpdesk</span>
+                <span class="fs-4 fw-bold text-lowercase tracking-tight logo-text">helpdesk</span>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="d-none d-lg-flex align-items-center gap-4">
                 <div class="dropdown">
-                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle" type="button"
+                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle nav-active-red" type="button"
                         data-bs-toggle="dropdown">
                         home
                     </button>
                     <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
-                        <li><a class="dropdown-item rounded-3 active" href="index.html">Corporate Edition</a></li>
+                        <li><a class="dropdown-item rounded-3 active nav-active-red" href="index.html">Corporate
+                                Edition</a></li>
                         <li><a class="dropdown-item rounded-3" href="index2.html">Modern AI Edition</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn border-0 text-lowercase fw-medium dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown">
+                        dashboards
+                    </button>
+                    <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
+                        <li><a class="dropdown-item rounded-3" href="user-dashboard.html">User Dashboard</a></li>
+                        <li><a class="dropdown-item rounded-3" href="admin-dashboard.html">Admin Dashboard</a></li>
                     </ul>
                 </div>
                 <a href="services.html"
@@ -73,12 +83,12 @@
 
             <!-- Mobile Toggle -->
             <div class="d-flex d-lg-none align-items-center gap-3">
-                <button id="theme-toggle-mobile" class="btn btn-link text-muted p-0">
+                <button id="theme-toggle-mobile" class="btn btn-link p-0">
                     <i class="bi bi-moon-fill fs-5"></i>
                 </button>
-                <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="offcanvas"
+                <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#mobileMenu">
-                    <i class="fas fa-bars fs-4"></i>
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
@@ -94,6 +104,10 @@
             <nav class="d-flex flex-column gap-4">
                 <a href="index.html" class="text-decoration-none text-lowercase fw-medium text-primary">home</a>
                 <a href="index2.html" class="text-decoration-none text-lowercase fw-medium text-muted">modern ai</a>
+                <a href="user-dashboard.html" class="text-decoration-none text-lowercase fw-medium text-muted">user
+                    dashboard</a>
+                <a href="admin-dashboard.html" class="text-decoration-none text-lowercase fw-medium text-muted">admin
+                    dashboard</a>
                 <a href="services.html" class="text-decoration-none text-lowercase fw-medium text-muted">services</a>
                 <a href="about.html" class="text-decoration-none text-lowercase fw-medium text-muted">about</a>
                 <a href="faq.html" class="text-decoration-none text-lowercase fw-medium text-muted">faq</a>
@@ -112,31 +126,34 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6">
                         <span
-                            class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-4 text-uppercase tracking-widest fw-bold"
+                            class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-4 text-uppercase tracking-widest fw-bold fade-in"
                             style="font-size: 0.7rem;">Corporate IT Support</span>
-                        <h1 class="display-3 fw-bold text-lowercase mb-4">Enterprise-grade IT for growing teams.</h1>
-                        <p class="lead text-muted mb-5">Proactive monitoring, strategic consulting, and elite technical
+                        <h1 class="display-3 fw-bold text-lowercase mb-4 fade-in">Enterprise-grade IT for growing teams.
+                        </h1>
+                        <p class="lead text-muted mb-5 fade-in">Proactive monitoring, strategic consulting, and elite
+                            technical
                             support designed to scale with your business ambition.</p>
-                        <div class="d-flex gap-3">
-                            <a href="register.html" class="btn btn-primary-custom btn-lg px-5 py-3">get started</a>
+                        <div class="d-flex flex-column flex-md-row gap-3 fade-in">
+                            <a href="login.html" class="btn btn-primary-custom btn-lg px-5 py-3">get started</a>
                             <a href="services.html"
-                                class="btn btn-outline-secondary btn-lg px-5 py-3 rounded-4 fw-bold lowercase">explore
-                                solutions</a>
+                                class="btn btn-outline-secondary btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase">view
+                                services</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="position-relative overflow-hidden rounded-[3rem] shadow-2xl scale-110">
+                        <div class="position-relative overflow-hidden rounded-[3rem] shadow-2xl scale-110 fade-in">
                             <img src="images/hero_server_room.png" alt="Server Room" class="w-100 h-100 object-cover">
                             <!-- Floating Glass Card -->
                             <div
-                                class="position-absolute bottom-0 start-0 bg-white p-4 rounded-4 shadow-lg m-4 border d-none d-md-block">
+                                class="position-absolute bottom-0 start-0 glass-card p-4 rounded-4 shadow-lg m-4 border d-none d-md-block">
                                 <div class="d-flex align-items-center gap-3">
                                     <div class="bg-primary text-white p-3 rounded-3">
                                         <i class="fas fa-bolt"></i>
                                     </div>
                                     <div>
                                         <div class="fw-bold fs-4">99.9%</div>
-                                        <div class="text-muted small uppercase tracking-tighter">System Uptime</div>
+                                        <div class="text-muted small text-uppercase tracking-tighter">System Uptime
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -188,18 +205,203 @@
             </div>
         </section>
 
+        <!-- Deployment Protocol (Process) -->
+        <section class="py-5 bg-tertiary">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="display-5 fw-bold text-lowercase mb-3">Deployment Protocol</h2>
+                    <p class="text-muted">A structured approach to institutional-grade IT integration.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="step-number">01</div>
+                        <h4 class="fw-bold text-lowercase mb-3">Audit</h4>
+                        <p class="text-secondary small">Comprehensive infrastructure and security assessment.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="step-number">02</div>
+                        <h4 class="fw-bold text-lowercase mb-3">Strategy</h4>
+                        <p class="text-secondary small">Tailored roadmap for scalability and compliance.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="step-number">03</div>
+                        <h4 class="fw-bold text-lowercase mb-3">Migration</h4>
+                        <p class="text-secondary small">Seamless zero-downtime transition to our core.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="step-number">04</div>
+                        <h4 class="fw-bold text-lowercase mb-3">Support</h4>
+                        <p class="text-secondary small">24/7 proactive monitoring and elite maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted Partners (Testimonials) -->
+        <section class="py-5 position-relative overflow-hidden">
+            <div class="container py-5">
+                <div class="position-absolute top-0 start-0 w-100 h-100 -z-1 opacity-10">
+                    <img src="images/testimonial_bg_tech_city.png" alt="" class="w-100 h-100 object-cover">
+                </div>
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="display-5 fw-bold text-lowercase mb-3">Trusted Partners</h2>
+                    <p class="text-muted">Direct institutional feedback from our global client base.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="glass-card p-5 rounded-[2rem] shadow-sm">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-secondary italic mb-4">"The audit stage revealed gaps we hadn't considered.
+                                helpdesk-pro is our most reliable partner."</p>
+                            <div class="fw-bold">CTO, Global Logistics</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card p-5 rounded-[2rem] shadow-sm border-primary">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-secondary italic mb-4">"Zero downtime migration was promised, and they
+                                delivered
+                                exactly that. Truly enterprise-grade."</p>
+                            <div class="fw-bold">Head of IT, FinTech Alpha</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card p-5 rounded-[2rem] shadow-sm">
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-secondary italic mb-4">"Their 12-minute response time isn't just a marketing
+                                claim—it's their reality. Best support in the industry."</p>
+                            <div class="fw-bold">CEO, Creative Dynamics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-5 bg-light-subtle">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="images/engineer_fixing_server.png" alt="Engineer"
+                                class="w-100 h-auto rounded-[3rem] shadow-2xl animate-rotate-custom">
+                            <!-- Floating Card -->
+                            <div
+                                class="position-absolute top-0 end-0 glass-card p-4 rounded-4 shadow-xl -m-4 animate-bounce-custom d-none d-md-block">
+                                <div class="text-primary fw-bold">Avg Response</div>
+                                <div class="display-6 fw-bold">12 Mins</div>
+                                <div class="text-muted small">SLA Guaranteed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold text-lowercase mb-4">Why Choose Us?</h2>
+                        <div class="d-flex flex-column gap-4">
+                            <div class="d-flex gap-3">
+                                <div class="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 32px; height: 32px;">
+                                    <i class="fas fa-check small"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-1">Guaranteed Service Levels</h4>
+                                    <p class="text-muted mb-0">Contract-backed response times and 99.9% availability
+                                        across all client nodes.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <div class="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 32px; height: 32px;">
+                                    <i class="fas fa-check small"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-1">Elite Engineering Team</h4>
+                                    <p class="text-muted mb-0">All tickets are handled by Tier 2 engineers or higher,
+                                        ensuring zero escalation friction.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <div class="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 32px; height: 32px;">
+                                    <i class="fas fa-check small"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold mb-1">Global Scale Support</h4>
+                                    <p class="text-muted mb-0">Follow-the-sun support model covering all timezones from
+                                        our 4 global hubs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Infrastructure (New Section) -->
+        <section class="py-5 bg-light-subtle position-relative overflow-hidden">
+            <div class="container py-5">
+                <div class="text-center mb-5 pb-5">
+                    <h2 class="display-5 fw-bold text-lowercase mb-3">Global Infrastructure</h2>
+                    <p class="text-muted">Direct terrestrial presence across all major innovation hubs.</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3">
+                        <div class="infra-node p-4">
+                            <i class="fas fa-network-wired text-primary fs-3 mb-3"></i>
+                            <h4 class="h5 fw-bold mb-1">North America</h4>
+                            <p class="text-secondary small mb-0">12 Primary Nodes</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="infra-node p-4">
+                            <i class="fas fa-satellite text-primary fs-3 mb-3"></i>
+                            <h4 class="h5 fw-bold mb-1">EMEA</h4>
+                            <p class="text-secondary small mb-0">8 Regional Hubs</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="infra-node p-4">
+                            <i class="fas fa-server text-primary fs-3 mb-3"></i>
+                            <h4 class="h5 fw-bold mb-1">APAC</h4>
+                            <p class="text-secondary small mb-0">15 Support Centers</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="infra-node p-4">
+                            <i class="fas fa-globe text-primary fs-3 mb-3"></i>
+                            <h4 class="h5 fw-bold mb-1">Global Core</h4>
+                            <p class="text-secondary small mb-0">99.99% Guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="py-5">
             <div class="container py-5">
                 <div
-                    class="bg-primary rounded-[3rem] p-5 text-center text-white shadow-2xl overflow-hidden position-relative">
+                    class="bg-primary rounded-[3rem] p-5 text-center text-white shadow-2xl overflow-hidden position-relative animate-pulse-custom">
                     <div class="position-relative z-1">
                         <h2 class="display-5 fw-bold text-lowercase mb-4">Ready to upgrade your infrastructure?</h2>
-                        <p class="lead mb-5 opacity-75">Join over 500+ enterprises who trust HelpDesk Pro for their
+                        <p class="lead mb-5 opacity-90">Join over 500+ enterprises who trust helpdesk-pro for their
                             mission-critical IT support.</p>
-                        <a href="register.html"
-                            class="btn btn-light btn-lg px-5 py-3 rounded-4 fw-bold text-primary text-lowercase">get
-                            started today</a>
+                        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+                            <a href="register.html"
+                                class="btn btn-light btn-lg px-5 py-3 rounded-4 fw-bold text-primary text-lowercase text-nowrap">get
+                                started now</a>
+                            <a href="#"
+                                class="btn btn-outline-light btn-lg px-5 py-3 rounded-4 fw-bold text-lowercase text-nowrap">schedule
+                                demo</a>
+                        </div>
                     </div>
                     <!-- Abstract Background Circles -->
                     <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10 pointer-events-none">
@@ -223,8 +425,7 @@
                         <div class="logo-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <span class="fs-4 fw-bold text-lowercase tracking-tight"
-                            style="color: var(--text-main);">helpdesk</span>
+                        <span class="fs-4 fw-bold text-lowercase tracking-tight logo-text">helpdesk</span>
                     </a>
                     <p class="text-muted mb-4 opacity-75">Enterprise-grade IT support that scales with your ambition.
                         Secure, reliable, and human-centric.</p>
